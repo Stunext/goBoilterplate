@@ -6,11 +6,11 @@ import (
 
 // User model
 type User struct {
-	ID       int    `json:"id" gorm:"primary_key"`
-	Username string `validate:"required" json:"username"`
-	Email    string `validate:"required,email" json:"email"`
-	Password string `validate:"required" json:"password"`
-	Role     string `validate:"required" json:"role"`
+	ID       int      `json:"id" gorm:"primary_key"`
+	Username string   `validate:"required" json:"username"`
+	Email    string   `validate:"required,email" json:"email"`
+	Password string   `validate:"required" json:"password"`
+	Role     string   `validate:"required" json:"role"`
 }
 
 // UserList Listado de Usuarios
