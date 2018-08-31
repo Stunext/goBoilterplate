@@ -17,7 +17,7 @@ import (
 // @Success 200 {array} models.User
 // @Router /api/users [get]
 func UserList(c echo.Context) error {
-	users := models.UserList()
+	users := models.UserProfileList()
 	if users != nil {
 		return c.JSON(200, users)
 	}

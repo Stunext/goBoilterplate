@@ -3,7 +3,7 @@ package models
 // Profile model
 type Profile struct {
 	ID        int    `json:"-" gorm:"primary_key"`
-	UserID    int    `validate:"required" json:"user_id"`
+	UserID    int    `json:"user_id" validate:"required"`
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 	Gender    string `json:"gender"`

@@ -6,16 +6,16 @@ import (
 
 // User model
 type User struct {
-	ID       int      `json:"id" gorm:"primary_key"`
-	Username string   `validate:"required" json:"username"`
-	Email    string   `validate:"required,email" json:"email"`
-	Password string   `validate:"required" json:"password"`
-	Role     string   `validate:"required" json:"role"`
+	ID       int    `json:"id" gorm:"primary_key"`
+	Username string `validate:"required" json:"username"`
+	Email    string `validate:"required,email" json:"email"`
+	Password string `validate:"required" json:"password"`
+	Role     string `validate:"required" json:"role"`
 }
 
 // UserList Listado de Usuarios
-func UserList() []*User {
-	users := []*User{}
+func UserList() []User {
+	users := []User{}
 	res := config.DB.Find(&users)
 	if res.Error == nil {
 		return users

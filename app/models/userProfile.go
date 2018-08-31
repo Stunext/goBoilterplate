@@ -11,7 +11,7 @@ type UserProfile struct {
 	Email    string  `validate:"required,email" json:"email"`
 	Password string  `validate:"required" json:"password"`
 	Role     string  `validate:"required" json:"role"`
-	Profile  Profile `json:"profile"`
+	Profile  Profile `json:"profile" gorm:"foreignkey:UserID"`
 }
 
 // TableName UserProfile to be `users`
@@ -20,9 +20,9 @@ func (UserProfile) TableName() string {
 }
 
 // UserProfileList Listado de Usuarios con sus datos de perfil
-func UserProfileList() []*UserProfile {
-	users := []*UserProfile{}
-	res := config.DB.Preload("Profile").Find(&users)
+func UserProfileList() []UserProfile {
+	users := []UserProfile{}
+	res := config.DB.Debug().Preload("Profile").Find(&users)
 	if res.Error == nil {
 		return users
 	}
