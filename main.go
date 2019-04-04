@@ -4,9 +4,12 @@ import (
 	"goBoilterplate/app/console"
 	"goBoilterplate/app/router"
 	"goBoilterplate/config"
+	"time"
+	"log"
 
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/labstack/echo"
+	"gopkg.in/tylerb/graceful.v1"
 )
 
 // @title Golang Boilterplate
@@ -27,5 +30,8 @@ func main() {
 	console.Schedule()
 	router.Init(app)
 
-	app.Logger.Fatal(app.Start(":3000"))
+	app.Server.Addr = ":3000"
+
+	log.Println("Starting Server...")
+	graceful.ListenAndServe(app.Server, 5*time.Second)
 }
