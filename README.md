@@ -64,13 +64,13 @@ Go code (golang) set of packages that provide many tools for testifying that you
 Install:
 
 ```sh
-$ go get github.com/stretchr/testify/assert
+$ go get -u github.com/stretchr/testify/assert
 ```
 
 Use:
 
 ```sh
-$ go test ./test
+$ go test ./tests
 ```
 
 -   [Swagger](https://github.com/swaggo/swag).
