@@ -75,13 +75,15 @@ $ go test ./test
 
 -   [Swagger](https://github.com/swaggo/swag).
 
-Swag converts Go annotations to Swagger Documentation 2.0. And provides a variety of builtin web framework lib. Let you can quickly integrated in existing golang project(using Swagger UI) .
+Swag converts Go annotations to Swagger Documentation 2.0. And provides a variety of builtin web framework lib. Let you can quickly integrated in existing golang project(using Swagger UI).
 
 Install:
 
 ```sh
-$ go get github.com/swaggo/swag/cmd/swag
+$ go get -u github.com/swaggo/swag/cmd/swag
 ```
+
+Make sure you have a GOBIN system enviroument variable.
 
 Use:
 
