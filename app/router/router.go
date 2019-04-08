@@ -4,7 +4,8 @@ import (
 	"goBoilterplate/app/controllers"
 	"goBoilterplate/app/middlewares"
 	_ "goBoilterplate/docs" // For Swagger
-
+	
+	"log"
 	"github.com/labstack/echo"
 	"github.com/swaggo/echo-swagger"
 )
@@ -35,4 +36,6 @@ func Init(app *echo.Echo) {
 			users.DELETE("/:id", controllers.UserDelete)
 		}
 	}
+
+	log.Printf("Server started...")
 }
