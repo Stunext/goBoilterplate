@@ -4,9 +4,10 @@ import (
 	"goBoilterplate/app/controllers"
 	"goBoilterplate/app/middlewares"
 	_ "goBoilterplate/docs" // For Swagger
-	
+
 	"log"
-	"github.com/labstack/echo"
+
+	"github.com/labstack/echo/v4"
 	"github.com/swaggo/echo-swagger"
 )
 

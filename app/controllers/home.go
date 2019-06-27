@@ -1,12 +1,12 @@
 package controllers
 
 import (
+	"fmt"
 	"goBoilterplate/app/helpers"
 	"goBoilterplate/app/models"
-	"fmt"
 	"net/http"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 // Index godoc

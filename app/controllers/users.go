@@ -5,7 +5,7 @@ import (
 	"goBoilterplate/app/models"
 	"strconv"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 // UserList godoc

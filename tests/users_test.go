@@ -2,15 +2,15 @@ package tests
 
 import (
 	"encoding/json"
-	"net/http/httptest"
-	"net/url"
 	"goBoilterplate/app/controllers"
 	"goBoilterplate/app/models"
+	"net/http/httptest"
+	"net/url"
 	"strconv"
 	"strings"
 	"testing"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
 )
 

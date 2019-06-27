@@ -1,7 +1,6 @@
 package console
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/robfig/cron"
@@ -17,5 +16,5 @@ func Schedule() {
 }
 
 func sendMails() {
-	fmt.Printf("Sending Emails \n")
+	log.Printf("Sending Emails \n")
 }

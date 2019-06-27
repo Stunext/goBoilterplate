@@ -7,7 +7,7 @@ import (
 	"time"
 
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"gopkg.in/tylerb/graceful.v1"
 )
 
