@@ -16,6 +16,7 @@ require (
 	github.com/stretchr/testify v1.3.0
 	github.com/swaggo/echo-swagger v0.0.0-20190329130007-1219b460a043
 	github.com/swaggo/swag v1.5.1
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v9 v9.29.0
 	gopkg.in/tylerb/graceful.v1 v1.2.15
 )
