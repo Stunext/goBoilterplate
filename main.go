@@ -11,9 +11,9 @@ import (
 	"gopkg.in/tylerb/graceful.v1"
 )
 
-// @title Golang Boilterplate
+// @title Golang Echo API
 // @version 1.0
-// @description This is a sample server
+// @description API documentation by Swagger
 
 // @securityDefinitions.apikey ApiKeyAuth
 // @in header

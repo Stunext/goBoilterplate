@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a sample server",
-        "title": "Golang Boilterplate",
+        "description": "API documentation by Swagger",
+        "title": "Golang Echo API",
         "contact": {},
         "license": {},
         "version": "1.0"

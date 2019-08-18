@@ -21,9 +21,9 @@ definitions:
 host: '{{.Host}}'
 info:
   contact: {}
-  description: This is a sample server
+  description: API documentation by Swagger
   license: {}
-  title: Golang Boilterplate
+  title: Golang Echo API
   version: "1.0"
 paths:
   /:
