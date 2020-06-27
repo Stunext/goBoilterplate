@@ -8,7 +8,7 @@ import (
 	"log"
 
 	"github.com/labstack/echo/v4"
-	"github.com/swaggo/echo-swagger"
+	echoSwagger "github.com/swaggo/echo-swagger"
 )
 
 // Init Router
