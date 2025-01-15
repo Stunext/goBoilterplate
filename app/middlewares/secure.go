@@ -16,10 +16,7 @@ func Secure() echo.MiddlewareFunc {
 		HSTSMaxAge:            0,
 		ContentSecurityPolicy: "",
 		Skipper: func(c echo.Context) bool {
-			if strings.Contains(c.Path(), "/docs") {
-				return true
-			}
-			return false
+			return strings.Contains(c.Path(), "/docs")
 		},
 	})
 }

@@ -5,13 +5,13 @@ import (
 	"goBoilterplate/config"
 	"strconv"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt/v5"
 )
 
 // JwtClaims struct
 type JwtClaims struct {
 	ID int `json:"id"`
-	jwt.StandardClaims
+	jwt.RegisteredClaims
 }
 
 // Login struct

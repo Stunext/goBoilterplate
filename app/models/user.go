@@ -26,10 +26,7 @@ func UserList() []User {
 // UserStore Almacena un Usuario
 func UserStore(user *User) bool {
 	res := config.DB.Create(&user)
-	if res.Error == nil {
-		return true
-	}
-	return false
+	return res.Error == nil
 }
 
 // UserShow Consulta un Usuario
@@ -45,18 +42,12 @@ func UserShow(id int) *User {
 // UserUpdate Actualiza un Usuario
 func UserUpdate(user *User) bool {
 	res := config.DB.Save(&user)
-	if res.Error == nil {
-		return true
-	}
-	return false
+	return res.Error == nil
 }
 
 // UserDelete Elimina un Usuario
 func UserDelete(id int) bool {
 	user := new(User)
 	res := config.DB.Where("id = ?", id).Delete(&user)
-	if res.Error == nil {
-		return true
-	}
-	return false
+	return res.Error == nil
 }

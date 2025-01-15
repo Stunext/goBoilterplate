@@ -11,10 +11,7 @@ import (
 func Gzip() echo.MiddlewareFunc {
 	return middleware.GzipWithConfig(middleware.GzipConfig{
 		Skipper: func(c echo.Context) bool {
-			if strings.Contains(c.Path(), "/docs") {
-				return true
-			}
-			return false
+			return strings.Contains(c.Path(), "/login")
 		},
 	})
 }

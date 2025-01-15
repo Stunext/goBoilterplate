@@ -1,29 +1,26 @@
 package middlewares
 
 import (
-	"goBoilterplate/app/models"
 	"os"
 	"strings"
 
+	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
-// Jwt Middleware
 func Jwt() echo.MiddlewareFunc {
 	secret := os.Getenv("APP_KEY")
-	return middleware.JWTWithConfig(middleware.JWTConfig{
-		SigningKey:    []byte(secret),
-		SigningMethod: "HS256",
-		ContextKey:    "token",
-		TokenLookup:   "header:Authorization",
-		AuthScheme:    "Bearer",
-		Claims:        &models.JwtClaims{},
-		Skipper: func(c echo.Context) bool {
-			if strings.Contains(c.Path(), "/login") {
-				return true
-			}
-			return false
+	return echojwt.WithConfig(echojwt.Config{
+		SigningKey: []byte(secret),
+		ContextKey: "token",
+		Skipper: middleware.Skipper(func(c echo.Context) bool {
+			return strings.Contains(c.Path(), "/login")
+		}),
+		ErrorHandler: func(c echo.Context, err error) error {
+			return c.JSON(401, map[string]interface{}{
+				"message": "Unauthorized",
+			})
 		},
 	})
 }

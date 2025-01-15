@@ -72,7 +72,7 @@ func Logout(c echo.Context) error {
 	return c.JSON(401, "Unauthorized")
 }
 
-//Test godoc
+// Test godoc
 func Test(c echo.Context) error {
 	req := c.Request()
 	format := `<code> Protocol: %s<br> Host: %s<br> Method: %s<br> Path: %s<br> </code>`
